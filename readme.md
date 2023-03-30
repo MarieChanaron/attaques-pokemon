@@ -1,8 +1,7 @@
 # Classes
 
-
 ## Classe pokémon : 
-un Pokémon possède :
+Un Pokémon possède :
 - un nom
 - un numéro d'identification dans le Pokédex
 - une taille
