@@ -1,6 +1,7 @@
 # Classes
 
-Créez une class pokémon : 
+
+## Classe pokémon : 
 un Pokémon possède :
 - un nom
 - un numéro d'identification dans le Pokédex
@@ -10,20 +11,24 @@ un Pokémon possède :
 - un certain nombre de points de vie
 - deux attaques différentes qui peuvent infliger un certain nombre de points de dégâts
 
-Classe attaque : 
+## Classe attaque : 
 Composée de deux attributs :
 - un libellé
 - un nombre de dégâts
 
+# Objets
+
 A partir de ces deux classes, instancier deux Pokémons : 
-* Pikachu :
+
+Pikachu :
 - numéro 025
 - type électrique
 - mesure 40 cm
 - pèse 6 kg
 - il a 82 points de vie
 - ses deux attaques sont : statik (qui inflige 10 points de dégâts), paratonnerre (qui en inflige 25 points)
-* Evoli : 
+
+Evoli : 
 - numéro 133
 - type normal
 - mesure 30 cm
