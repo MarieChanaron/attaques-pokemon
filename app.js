@@ -13,9 +13,11 @@ const playGame = () => {
     makePokemon('Evoli', 133, 'normal', 30, 6.5, 70, [getAttack('adaptabilite'), getAttack('anticipation')]);
 
     // Find first player and second player
-    const fighters = findParticipants();
-    const {pokemon1} = fighters;
-    const {pokemon2} = fighters;
+    const {pokemon1, pokemon2} = findParticipants();
+
+    // Display names in the title
+    document.querySelector('h1 span:first-child').innerText = pokemon1.name;
+    document.querySelector('h1 span:last-child').innerText = pokemon2.name;
 
     // Display first player name
     document.querySelector('#first span').innerText = pokemon1.name;

@@ -22,9 +22,11 @@ const getAttack = attackName => {
 }
 
 const findParticipants = () => {
-    const randomNum = Math.floor(Math.random() * 2);
-    const pokemon1 = pokemons[randomNum];
-    const pokemon2 = pokemons[randomNum === 1 ? 0 : 1]
+    const rand1 = Math.floor(Math.random() * pokemons.length);
+    const pokemon1 = pokemons[rand1];
+    const remainingPokemons = pokemons.filter(pok => pok !== pokemon1);
+    const rand2 = Math.floor(Math.random() * remainingPokemons.length);
+    const pokemon2 = remainingPokemons[rand2];
     return {pokemon1, pokemon2};
 }
 
