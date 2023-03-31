@@ -19,10 +19,6 @@ export class Pokemon {
         return this._lifePoints;
     }
 
-    set lifePoints(points) {
-        this._lifePoints = points;
-    }
-
     get remainingLifePoints() {
         return this._remainingLifePoints;
     }
