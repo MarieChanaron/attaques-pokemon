@@ -1,4 +1,4 @@
-import {makeAttack, makePokemon, getAttack, playAttackRounds, findParticipants} from './modules/functions.js';
+import {makeAttack, makePokemon, getAttack, playAttackRounds, findParticipants} from './modules/functions.mjs';
 
 const playGame = () => {
 
@@ -13,21 +13,21 @@ const playGame = () => {
     makePokemon('Evoli', 133, 'normal', 30, 6.5, 70, [getAttack('adaptabilite'), getAttack('anticipation')]);
 
     // Find first player and second player
-    const players = findParticipants();
-    const {player1} = players;
-    const {player2} = players;
+    const fighters = findParticipants();
+    const {pokemon1} = fighters;
+    const {pokemon2} = fighters;
 
     // Display first player name
-    document.querySelector('#first span').innerText = player1.name;
+    document.querySelector('#first span').innerText = pokemon1.name;
 
     // Display each player and his points
-    document.querySelector('#points #player-one span:first-child').innerText = player1.name;
-    document.querySelector('#points #player-one span:last-child').innerText = player1.lifePoints;
-    document.querySelector('#points #player-two span:first-child').innerText = player2.name;
-    document.querySelector('#points #player-two span:last-child').innerText = player2.lifePoints;
+    document.querySelector('#points #player-one span:first-child').innerText = pokemon1.name;
+    document.querySelector('#points #player-one span:last-child').innerText = pokemon1.lifePoints;
+    document.querySelector('#points #player-two span:first-child').innerText = pokemon2.name;
+    document.querySelector('#points #player-two span:last-child').innerText = pokemon2.lifePoints;
 
     // Make the 2 pokemons fight against each other
-    const winner = playAttackRounds(player1, player2);
+    const winner = playAttackRounds(pokemon1, pokemon2);
 
     // Display winner
     document.querySelector('#winner span:first-child').innerText = winner.name;

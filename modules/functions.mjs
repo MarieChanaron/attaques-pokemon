@@ -23,9 +23,9 @@ const getAttack = attackName => {
 
 const findParticipants = () => {
     const randomNum = Math.floor(Math.random() * 2);
-    const player1 = pokemons[randomNum];
-    const player2 = pokemons[randomNum === 1 ? 0 : 1]
-    return {player1, player2};
+    const pokemon1 = pokemons[randomNum];
+    const pokemon2 = pokemons[randomNum === 1 ? 0 : 1]
+    return {pokemon1, pokemon2};
 }
 
 const displayAttackText = (player, damage) => {
@@ -46,12 +46,12 @@ const attack = (attacker, attacked) => {
     displayAttackText(attacker.name, attackType.damage);
 }
 
-const playAttackRounds = (player1, player2) => {
+const playAttackRounds = (pokemon1, pokemon2) => {
     do {
-        attack(player1, player2);
-        attack(player2, player1);
-    } while (player1.remainingLifePoints > 0 && player2.remainingLifePoints > 0);
-    const winner = player1.remainingLifePoints > player2.remainingLifePoints ? player1 : player2;
+        attack(pokemon1, pokemon2);
+        attack(pokemon2, pokemon1);
+    } while (pokemon1.remainingLifePoints > 0 && pokemon2.remainingLifePoints > 0);
+    const winner = pokemon1.remainingLifePoints > pokemon2.remainingLifePoints ? pokemon1 : pokemon2;
     return winner;
 }
 

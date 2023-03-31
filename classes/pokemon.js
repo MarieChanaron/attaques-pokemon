@@ -31,9 +31,9 @@ export class Pokemon {
         return this._attacks;
     }
 
-    attack(pokemonName, attackName) {
-        const damage = attackName.damage;
-        pokemonName.remainingLifePoints -= damage;
+    attack(pokemon, attack) {
+        const damage = attack.damage;
+        pokemon.remainingLifePoints -= damage;
     }
 
 }
