@@ -17,15 +17,19 @@ const playGame = () => {
     const {player1} = players;
     const {player2} = players;
 
+    // Display first player name
     document.querySelector('#first span').innerText = player1.name;
 
+    // Display each player and his points
     document.querySelector('#points #player-one span:first-child').innerText = player1.name;
     document.querySelector('#points #player-one span:last-child').innerText = player1.lifePoints;
     document.querySelector('#points #player-two span:first-child').innerText = player2.name;
     document.querySelector('#points #player-two span:last-child').innerText = player2.lifePoints;
 
+    // Make the 2 pokemons fight against each other
     const winner = playAttackRounds(player1, player2);
 
+    // Display winner
     document.querySelector('#winner span:first-child').innerText = winner.name;
     document.querySelector('#winner span:last-child').innerText = winner.remainingLifePoints;
 }
